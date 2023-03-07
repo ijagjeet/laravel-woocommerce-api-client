@@ -1,8 +1,8 @@
 # Laravel WooCommerce Rest API Client
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/pixelpeter/laravel5-woocommerce-api-client.svg?style=flat-square)](https://packagist.org/packages/pixelpeter/laravel5-woocommerce-api-client)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/ijagjeet/laravel-woocommerce-api-client.svg?style=flat-square)](https://packagist.org/packages/ijagjeet/laravel-woocommerce-api-client)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Coverage Status](https://coveralls.io/repos/github/pixelpeter/laravel5-woocommerce-api-client/badge.svg?branch=master)](https://coveralls.io/github/pixelpeter/laravel5-woocommerce-api-client?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/ijagjeet/laravel-woocommerce-api-client/badge.svg?branch=master)](https://coveralls.io/github/ijagjeet/laravel-woocommerce-api-client?branch=master)
 
 A simple Laravel wrapper for the [official WooCommerce REST API PHP Library](https://github.com/woothemes/wc-api-php) from Automattic.
 
@@ -10,8 +10,8 @@ A simple Laravel wrapper for the [official WooCommerce REST API PHP Library](htt
 
 | Laravel | wc-api-php used | Wordpress |  Woocommerce  |          WC API version           | use branch |
 | ------  | --------------- | --------- | ------------- | --------------------------------- | ---------- |
-| 9.0+    | 2.x             | 5.5+      | 3.5+          | v1, v2, v3                        | w.i.p.     |  
-| 5.7+    | 2.x             | 4.4+      | 3.5+          | v1, v2, v3                        | w.i.p.     |
+| 9.0+    | 2.x             | 5.5+      | 3.5+          | v1, v2, v3                        | ^4.0       |  
+| 5.7+    | 2.x             | 4.4+      | 3.5+          | v1, v2, v3                        | ^4.0       |
 | 5.5+    | 1.3.x           | 4.4+      | 3.0 - 3.4.x   | v1, v2, v3                        | ^3.0       |
 | 5.4+    | 1.3.x           | 4.4+      | 2.6 - 2.6.14  | v1, v2                            | ^2.0       |
 | 5.3     | 1.3.x           | 4.1+      | 2.1 - 2.5.5   | legacy v1, legacy v2, legacy v3   | ^1.0       |
@@ -22,17 +22,17 @@ A simple Laravel wrapper for the [official WooCommerce REST API PHP Library](htt
 
 For API Version v2, WooCommerce 3.0+, WordPress 5.5+, php 7.0+, Laravel 9.0+ use the v3.x branch
 ``` bash
-composer require pixelpeter/laravel5-woocommerce-api-client ^3.0
+composer require ijagjeet/laravel-woocommerce-api-client ^3.0
 ```
 
 For API Version v1, WooCommerce 2.6+, WordPress 4.4+, Laravel 5.4+ use the v2.x branch
 ``` bash
-composer require pixelpeter/laravel5-woocommerce-api-client ^2.0
+composer require ijagjeet/laravel-woocommerce-api-client ^2.0
 ```
 
 For older versions of Woocommerce starting from 2.1+ use the v1.x branch
 ``` bash
-composer require pixelpeter/laravel5-woocommerce-api-client ^1.0
+composer require ijagjeet/laravel-woocommerce-api-client ^1.0
 ```
 
 ### Step 2: Add the Service Provider (not needed with v3.x)
@@ -40,7 +40,7 @@ Add the service provider in `app/config/app.php`
 ```php
 'provider' => [
     ...
-    Pixelpeter\Woocommerce\WoocommerceServiceProvider::class,
+    IJagjeet\Woocommerce\WoocommerceServiceProvider::class,
     ...
 ];
 ```
@@ -50,14 +50,14 @@ Add the alias in `app/config/app.php`
 ```php
 'aliases' => [
     ...
-    'Woocommerce' => Pixelpeter\Woocommerce\Facades\Woocommerce::class,
+    'Woocommerce' => IJagjeet\Woocommerce\Facades\Woocommerce::class,
     ...
 ];
 ```
 
 ### Step 4: Publish configuration
 ``` bash
-php artisan vendor:publish --provider="Pixelpeter\Woocommerce\WoocommerceServiceProvider"
+php artisan vendor:publish --provider="IJagjeet\Woocommerce\WoocommerceServiceProvider"
 ```
 
 ### Step 5: Customize configuration
@@ -231,6 +231,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
+- [Peter Haak](https://github.com/pixelpeter)
 - [palPalani](https://github.com/palpalani)
 - [All Contributors](../../contributors)
 

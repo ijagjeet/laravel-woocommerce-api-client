@@ -2,6 +2,9 @@
 
 All Notable changes for the Laravel 5 WooCommerce REST API Client will be documented in this file
 
+## 3.0.2
+- Update outdated composer dependencies (phpunit, mockery)
+
 ## 3.0.1
 - Update outdated composer dependencies (phpunit, mockery)
 - Add php 7.2 to travis-ci 

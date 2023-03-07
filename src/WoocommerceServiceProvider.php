@@ -1,6 +1,6 @@
 <?php
 
-namespace Pixelpeter\Woocommerce;
+namespace IJagjeet\Woocommerce;
 
 use Automattic\WooCommerce\Client;
 use Illuminate\Support\ServiceProvider;
@@ -58,10 +58,10 @@ class WoocommerceServiceProvider extends ServiceProvider
             );
         });
 
-        $app->singleton('Pixelpeter\Woocommerce\WoocommerceClient', function ($app) {
+        $app->singleton('IJagjeet\Woocommerce\WoocommerceClient', function ($app) {
             return new WoocommerceClient($app['woocommerce.client']);
         });
 
-        $app->alias('Pixelpeter\Woocommerce\WoocommerceClient', 'woocommerce');
+        $app->alias('IJagjeet\Woocommerce\WoocommerceClient', 'woocommerce');
     }
 }

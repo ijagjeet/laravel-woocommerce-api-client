@@ -1,9 +1,9 @@
 <?php
 
-namespace Pixelpeter\Woocommerce\Test;
+namespace IJagjeet\Woocommerce\Test;
 
 use Mockery;
-use Pixelpeter\Woocommerce\WoocommerceClient;
+use IJagjeet\Woocommerce\WoocommerceClient;
 
 /**
  * @property Mockery\MockInterface client

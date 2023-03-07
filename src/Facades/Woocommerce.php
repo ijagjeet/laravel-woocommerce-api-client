@@ -1,6 +1,6 @@
 <?php
 
-namespace Pixelpeter\Woocommerce\Facades;
+namespace IJagjeet\Woocommerce\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,5 +1,5 @@
 {
-    "name": "pixelpeter/laravel5-woocommerce-api-client",
+    "name": "ijagjeet/laravel-woocommerce-api-client",
     "description": "Laravel wrapper for the Woocommerce REST API",
     "keywords": [
         "laravel",
@@ -10,20 +10,16 @@
         "ecommerce",
         "e-commerce",
         "shop",
-        "cart"
+        "cart",
+        "ijagjeet"
     ],
-    "homepage": "https://github.com/pixelpeter/laravel5-woocommerce-api-client",
+    "homepage": "https://github.com/ijagjeet/laravel-woocommerce-api-client",
     "license": "MIT",
     "authors": [
         {
-            "name": "Peter Haak",
-            "email": "info@pixelpeter.de",
-            "homepage": "https://pixelpeter.de/",
-            "role": "Developer"
-        },
-        {
-            "name": "palPalani",
-            "email": "palani.p@gmail.com",
+            "name": "ijagjeet",
+            "email": "talk@ijagjeet.com",
+            "homepage": "https://ijagjeet.com",
             "role": "Developer"
         }
     ],
@@ -34,12 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Pixelpeter\\Woocommerce\\": "src"
+            "IJagjeet\\Woocommerce\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Pixelpeter\\Woocommerce\\Test\\": "tests"
+            "IJagjeet\\Woocommerce\\Test\\": "tests"
         }
     },
     "require-dev": {
@@ -70,10 +66,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Pixelpeter\\Woocommerce\\WoocommerceServiceProvider"
+                "IJagjeet\\Woocommerce\\WoocommerceServiceProvider"
             ],
             "aliases": {
-                "Woocommerce": "Pixelpeter\\Woocommerce\\Facades\\Woocommerce"
+                "Woocommerce": "IJagjeet\\Woocommerce\\Facades\\Woocommerce"
             }
         }
     },

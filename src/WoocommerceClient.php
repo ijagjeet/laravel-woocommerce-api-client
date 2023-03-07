@@ -1,6 +1,6 @@
 <?php
 
-namespace Pixelpeter\Woocommerce;
+namespace IJagjeet\Woocommerce;
 
 use Automattic\WooCommerce\Client;
 
