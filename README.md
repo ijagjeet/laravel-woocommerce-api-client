@@ -1,22 +1,31 @@
-# Laravel 5 WooCommerce API Client
+# Laravel WooCommerce Rest API Client
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/pixelpeter/laravel5-woocommerce-api-client.svg?style=flat-square)](https://packagist.org/packages/pixelpeter/laravel5-woocommerce-api-client)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Travis Build](https://img.shields.io/travis/pixelpeter/laravel5-woocommerce-api-client/master.svg?style=flat-square)](https://travis-ci.org/pixelpeter/laravel5-woocommerce-api-client)
-[![Scrutinizer Quality](https://img.shields.io/scrutinizer/g/pixelpeter/laravel5-woocommerce-api-client.svg?style=flat-square)](https://scrutinizer-ci.com/g/pixelpeter/laravel5-woocommerce-api-client)
-[![Scrutinizer Build](https://img.shields.io/scrutinizer/build/g/pixelpeter/laravel5-woocommerce-api-client.svg?style=flat-square)](https://scrutinizer-ci.com/g/pixelpeter/laravel5-woocommerce-api-client)
-[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/edfbddc6-ccbc-425c-9db8-726a5bc371e7.svg?style=flat-square)](https://insight.sensiolabs.com/projects/edfbddc6-ccbc-425c-9db8-726a5bc371e7)
-[![Total Downloads](https://img.shields.io/packagist/dt/pixelpeter/laravel5-woocommerce-api-client.svg?style=flat-square)](https://packagist.org/packages/pixelpeter/laravel5-woocommerce-api-client)
-[![Dependency Status](https://www.versioneye.com/user/projects/56f9414235630e0034fda5a5/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56f9414235630e0034fda5a5)
 [![Coverage Status](https://coveralls.io/repos/github/pixelpeter/laravel5-woocommerce-api-client/badge.svg?branch=master)](https://coveralls.io/github/pixelpeter/laravel5-woocommerce-api-client?branch=master)
 
-A simple Laravel 5 wrapper for the [official WooCommerce REST API PHP Library](https://github.com/woothemes/wc-api-php) from Automattic.
+A simple Laravel wrapper for the [official WooCommerce REST API PHP Library](https://github.com/woothemes/wc-api-php) from Automattic.
+
+## Version overview
+
+| Laravel | wc-api-php used | Wordpress |  Woocommerce  |          WC API version           | use branch |
+| ------  | --------------- | --------- | ------------- | --------------------------------- | ---------- |
+| 9.0+    | 2.x             | 5.5+      | 3.5+          | v1, v2, v3                        | w.i.p.     |  
+| 5.7+    | 2.x             | 4.4+      | 3.5+          | v1, v2, v3                        | w.i.p.     |
+| 5.5+    | 1.3.x           | 4.4+      | 3.0 - 3.4.x   | v1, v2, v3                        | ^3.0       |
+| 5.4+    | 1.3.x           | 4.4+      | 2.6 - 2.6.14  | v1, v2                            | ^2.0       |
+| 5.3     | 1.3.x           | 4.1+      | 2.1 - 2.5.5   | legacy v1, legacy v2, legacy v3   | ^1.0       |
 
 ## Installation
 
-### Step 1: Install Through Composer
+### Step 1: Install through Composer
 
-For WooCommerce (WC) 2.6+ use the v2.x branch
+For API Version v2, WooCommerce 3.0+, WordPress 5.5+, php 7.0+, Laravel 9.0+ use the v3.x branch
+``` bash
+composer require pixelpeter/laravel5-woocommerce-api-client ^3.0
+```
+
+For API Version v1, WooCommerce 2.6+, WordPress 4.4+, Laravel 5.4+ use the v2.x branch
 ``` bash
 composer require pixelpeter/laravel5-woocommerce-api-client ^2.0
 ```
@@ -26,7 +35,7 @@ For older versions of Woocommerce starting from 2.1+ use the v1.x branch
 composer require pixelpeter/laravel5-woocommerce-api-client ^1.0
 ```
 
-### Step 2: Add the Service Provider
+### Step 2: Add the Service Provider (not needed with v3.x)
 Add the service provider in `app/config/app.php`
 ```php
 'provider' => [
@@ -36,7 +45,7 @@ Add the service provider in `app/config/app.php`
 ];
 ```
 
-### Step 3: Add the Facade
+### Step 3: Add the Facade (not needed with v3.x)
 Add the alias in `app/config/app.php`
 ```php
 'aliases' => [
@@ -54,7 +63,7 @@ php artisan vendor:publish --provider="Pixelpeter\Woocommerce\WoocommerceService
 ### Step 5: Customize configuration
 You can directly edit the configuration in `config/woocommerce.php` or copy these values to your `.env` file.
 ```php
-WOOCOMMERCE_STORE_URL=http://example.org
+WOOCOMMERCE_STORE_URL=https://example-store.org
 WOOCOMMERCE_CONSUMER_KEY=ck_your-consumer-key
 WOOCOMMERCE_CONSUMER_SECRET=cs_your-consumer-secret
 WOOCOMMERCE_VERIFY_SSL=false
@@ -199,15 +208,31 @@ Woocommerce::getResponse();
 Woocommerce::getResponse()->getHeaders()['X-WP-Total']
 ```
 
-
 ### More Examples
-Refer to [WooCommerce REST API Documentation](https://woocommerce.github.io/woocommerce-rest-api-docs) for more examples and documention.
+Refer to [WooCommerce REST API Documentation](https://woocommerce.github.io/woocommerce-rest-api-docs) for more examples and documentation.
 
 ## Testing
-Run the tests with:
+
 ```bash
-vendor/bin/phpunit
+composer test
 ```
+
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
+## Contributing
+
+Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
+
+## Security Vulnerabilities
+
+Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+
+## Credits
+
+- [palPalani](https://github.com/palpalani)
+- [All Contributors](../../contributors)
 
 ## License
 
